@@ -1,41 +1,71 @@
-# Project Title
+# Degen Token (DGN)
 
-Simple overview of use/purpose.
+An ERC20 token contract built for the Degen Gaming project.
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+This project consists of a Solidity ERC20 token contract named Degen (DGN), deployed on the Fuji C-Chain testnet. It includes a Next.js frontend that interacts with the contract via the ethers library. This project serves as a deliverable for a blockchain development course and demonstrates the deployment, interaction, and management of an ERC20 token on a testnet.
 
 ## Getting Started
 
+### Prerequisites
+
+- **Node.js** and **npm** - Make sure you have Node.js installed to manage dependencies.
+- **Hardhat** - Required for smart contract development and deployment.
+- **Fuji Testnet Access** - You’ll need an Avalanche C-Chain wallet with testnet AVAX to deploy the contract.
+
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/degen-token.git
+   cd degen-token
+   ```
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-### Executing program
+3. **Configure environment**:
+   - Set up a `.env` file with your Fuji testnet private key and an RPC URL for the Fuji network.
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+### Deploying the Contract
+
+1. **Compile the contract**:
+   ```bash
+   npx hardhat compile
+   ```
+
+2. **Deploy to Fuji testnet**:
+   ```bash
+   npx hardhat run scripts/deploy.js --network fuji
+   ```
+
+### Running the Frontend
+
+1. **Navigate to the frontend**:
+   ```bash
+   cd frontend
+   ```
+
+2. **Start the frontend**:
+   ```bash
+   npm run dev
+   ```
+
+3. Open your browser and visit `http://localhost:3000`.
 
 ## Help
 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+For common issues:
+
+- **Hardhat compilation errors**: Try `npx hardhat clean` and recompile.
+- **Fuji network connection issues**: Ensure RPC URL is correct and testnet AVAX is available.
 
 ## Authors
 
-Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
-
+Contributions by [Your Name](https://yourcontactinfo).
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is licensed under the MIT License - see the LICENSE.md file for details.
