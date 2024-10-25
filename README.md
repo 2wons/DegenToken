@@ -62,9 +62,6 @@ For common issues:
 - **Hardhat compilation errors**: Try `npx hardhat clean` and recompile.
 - **Fuji network connection issues**: Ensure RPC URL is correct and testnet AVAX is available.
 
-## Authors
-
-Contributions by [Your Name](https://yourcontactinfo).
 
 ## License
 
