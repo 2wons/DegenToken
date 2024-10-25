@@ -2,6 +2,9 @@
 
 An ERC20 token contract built for the Degen Gaming project.
 
+![image](https://github.com/user-attachments/assets/03c20394-0bb9-4336-ad15-924f40607a70)
+
+
 ## Description
 
 This project consists of a Solidity ERC20 token contract named Degen (DGN), deployed on the Fuji C-Chain testnet. It includes a Next.js frontend that interacts with the contract via the ethers library. This project serves as a deliverable for a blockchain development course and demonstrates the deployment, interaction, and management of an ERC20 token on a testnet.
