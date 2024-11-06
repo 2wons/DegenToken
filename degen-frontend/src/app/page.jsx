@@ -13,23 +13,26 @@ import { TransferPopup, BurnPopup } from "@/components/ui/d-popup"
 import { useState, useEffect } from "react";
 
 import { ethers } from "ethers";
-import degenAbi from "../../../artifacts/contracts/DegenToken.sol/DegenToken.json"
+import degenAbi from "../../../artifacts/contracts/DegenToken.sol/degentoken.json"
 import { Loader } from "@/components/loading-overlay";
 
-const contractAddress = "0xCcC8c6C464b6Ad1D022959aeA091aCfa62dFC25f";
+const contractAddress = "0xC02B00669dBC25319F1Ff7EA21b4ccb7f2079B50";
 
 const shop = [
   {
+    id: "sea-salt",
     name: "Sea Salt",
     image: "https://res.cloudinary.com/kineticlabs/image/upload/q_auto/c_fit,w_1300/f_auto/v1/api-images/products/ktt-sea-salt-lemon/ktt-sea-salt-lemon-switches_xa2d8d",
     price: 500
   },
   {
+    id: "rosewood",
     name: "Rosewood",
     image: "https://res.cloudinary.com/kineticlabs/image/upload/q_auto/c_fit,w_1300/f_auto/v1/api-images/products/ktt-rose/DSC03019_zfkczp",
     price: 350
   },
   {
+    id: "kang-white",
     name: "Kang White",
     image: "https://res.cloudinary.com/kineticlabs/image/upload/q_auto/c_fit,w_1300/f_auto/v1/api-images/products/ktt-kang-white-linear/ktt-kang-white-v3-linear-switches_zkwhcr",
     price: 100
