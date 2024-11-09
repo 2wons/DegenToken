@@ -13,7 +13,7 @@ import { TransferPopup, BurnPopup } from "@/components/ui/d-popup"
 import { useState, useEffect } from "react";
 
 import { ethers } from "ethers";
-import degenAbi from "../../../artifacts/contracts/DegenToken.sol/degentoken.json"
+import degenAbi from "../../../artifacts/contracts/DegenToken.sol/DegenToken.json"
 import { Loader } from "@/components/loading-overlay";
 
 const contractAddress = "0xC02B00669dBC25319F1Ff7EA21b4ccb7f2079B50";
@@ -102,11 +102,11 @@ const TransactScreen = ({ contract, wallet }) => {
     cleanup();
   }
 
-  const redeem = async (itemId, amount) => {
+  const redeem = async (itemId) => {
     try {
       setLoading(true)
       setMessage("pending transaction")
-      const tx = await contract.redeem(itemId, amount)
+      const tx = await contract.redeem(itemId)
       await tx.wait()
       getBalance();
       alert('Redeem Successful')
@@ -193,7 +193,7 @@ const TransactScreen = ({ contract, wallet }) => {
               </div>
               <div className="w-full">
                 <Button className="w-full" onClick={async () => {
-                  await redeem(item.name, item.price)
+                  await redeem(item.id)
                 }}>Redeem</Button>
               </div>
             </CardFooter>
